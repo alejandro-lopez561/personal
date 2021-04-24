@@ -300,6 +300,10 @@ h3#contact-title#contact-title a#ctitle {
     height: 25rem;
 }
 
+.spacing {
+    letter-spacing: 1.5rem;
+}
+
 .contact {
     padding-top: 6rem;
     padding-left: 3rem;
