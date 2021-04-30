@@ -20,6 +20,7 @@ body{
 
 header {
     height: 95vh;
+    width: 100%;
     background-image: url(./images/bg-img.jpg);
     background-size: cover;
     display: flex;
@@ -178,15 +179,30 @@ li, a.navbar-link{
     top: 45%;
     font-size: 5rem;
     cursor: pointer;
+    z-index: 1;
 }
 .content {
-    margin: 5rem;
+    margin: 0;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    padding: 2rem;
-    display: grid;
+    padding: 1rem;
+    height: auto;
     align-items: center;
-    
+    width: 100%;
+    position: relative;
+}
+
+.content::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+.block-container {
+    width: 100%;
+    margin: 20px 5px;
+    display: flex;
+    height: auto;    
 }
 
 h1#main-title#main-title a#title {
@@ -198,7 +214,7 @@ h1#main-title#main-title a#title {
 
 h3#stack-title#stack-title a#stitle {
     padding-top: 2rem;
-    display: inline-block;
+    display: block;
     justify-content: center;
     font-weight: 600;
     font-size: 3.5rem;
@@ -219,14 +235,14 @@ h3#contact-title#contact-title a#ctitle {
     font-size: 3.7rem;
 }
 
-.about, .stack {
-    padding-top: 1.5rem;
-    height: 100vh;
+.block-container .about, 
+.block-container .stack {
+    width: 100%;
     font-size: 1.7rem;
     font-weight: 600;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 50vh);
+    grid-template-rows: repeat(2, 50%);
     grid-gap: 1rem;
     text-align: justify;
 }
@@ -255,8 +271,15 @@ h3#contact-title#contact-title a#ctitle {
 .stack p.stack-p{
     position: relative;
     font-size: 2.6rem;
-    top: 15%;
-    left: 10%;
+    left: 2%;
+}
+
+.stack .tech-container {
+    position: relative;
+    text-align: center;
+    left: 15%;
+    top: 10%;
+    width: 60rem;
 }
 
 .stack div.tech-container span.tstack{
@@ -267,41 +290,43 @@ h3#contact-title#contact-title a#ctitle {
     font-size: 10rem;
 }
 
-.stack .tech-container {
-    position: relative;
-    align-items: center;
-    left: 30%;
-    top: 10%;
-    width: 60rem;
-}
-
 .projects {
     padding-top: 1rem;
-    height: 100vh;
+    width: 100%;
     font-size: 1.6rem;
     font-weight: 500;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 30vh);
+    grid-template-rows: repeat(3, 33%);
     grid-gap: 1rem;
     text-align: justify;
 }
 
-.projects div#img-1 {
-    width: 35rem;
-    height: 25rem;
-}
-.projects div#img-2 {
-    width: 35rem;
-    height: 25rem;
-}
-.projects div#img-3 {
+.projects div#img-1,
+.projects div#img-2,
+.projects div#img-3  {
     width: 35rem;
     height: 25rem;
 }
 
 .spacing {
     letter-spacing: 1.5rem;
+}
+
+.container-pics{
+    border: 1px solid white;
+    width: 45rem;
+    height: 35rem;
+    border-radius: 1rem;
+    box-shadow: .2rem 1rem 1.2rem rgba(0,0,0,.5);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+    left: 30%;
+    top: 10%;
 }
 
 .contact {
@@ -312,60 +337,25 @@ h3#contact-title#contact-title a#ctitle {
     font-weight: 600;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(1, 100vh);
-}
-
-.container-pics{
-    border: 1px solid white;
-    width: 45rem;
-    height: 35rem;
-    background-color: black;
-    border-radius: 1rem;
-    box-shadow: .2rem 1rem 1.2rem rgba(0,0,0,.5);
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    margin-top: 1rem;
+    grid-template-rows: repeat(1, 100%);
     position: relative;
-    left: 30%;
-    top: 10%;
 }
 
 .contact-me {
-    position: relative;
-    top: 0%;
-    left: 60%;
+    position: absolute;
+    width: 600px;
+    top: 40%;
+    left: 250%;
 }
 
-.contact-me-phone {
-    display: block;
-    letter-spacing: .5rem;
-    animation-name: moveInContact;
-    animation-duration: 2s;
-}
-
-.contact-me-email {
-    display: block;
-    letter-spacing: .5rem;
-    animation-name: moveInContact;
-    animation-duration: 2s;
-}
-
-.contact-me-linkedin {
-    display: block;
-    letter-spacing: .5rem;
-    animation-name: moveInContact;
-    animation-duration: 2s;
-}
-
+.contact-me-phone,
+.contact-me-email,
+.contact-me-linkedin,
 .contact-me-github {
     display: block;
     letter-spacing: .5rem;
     animation-name: moveInContact;
     animation-duration: 2s;
-    
 }
 
 @keyframes moveInContact {
@@ -380,10 +370,64 @@ h3#contact-title#contact-title a#ctitle {
     }
 }
 
-
-
 footer {
     font-size: 1.4rem;
     text-align: center;
     margin-bottom: 2rem;
 }
+
+@media only screen and (min-width: 500px) and (max-width: 1040px){
+    html {
+        font-size: 31.25%;
+    }
+    
+    .content {
+        width: 100%;
+        margin: 0;
+    }
+    .block-container {
+        width: 100%;
+    }
+    section {
+        width: 100%;
+    }
+    .contact-me {
+        position: absolute;
+        width: 260px;
+        top: 40%;
+        left: 40%;
+    }
+
+    .daughters{
+        width: 105%;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-pics{
+        left: 15%;
+    }
+    
+    .stack .tech-container{
+        left: 5%;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20%;
+    }
+
+    .about p.right {
+        left: 10%;
+    }
+    .about h3.big-centered{
+        left: 40%;
+        top: 45%;
+    }
+    .hidden {
+        display: none;
+    }
+}
+

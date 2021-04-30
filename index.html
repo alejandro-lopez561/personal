@@ -18,7 +18,7 @@
         </div>
         <nav class="navbar">
             <ul class="navbar">
-                <li><a class="navbar-link" href="#about">About me</a></li>
+                <li><a class="navbar-link hidden" href="#about">About me</a></li>
                 <li><a class="navbar-link" href="#stack">Stack</a></li>
                 <li><a class="navbar-link" href="#projects">Projects</a></li>
             </ul>
@@ -35,7 +35,7 @@
         <span class="btn-fixed"><a href="#top"><i class="fas fa-arrow-circle-up"></i></a></span>
     </div>
     <div class="content">
-        <div>
+        <div class="block-container">
             <section class="about">
                 <div>
                     <h1 id="main-title"><a id="title" name="about">ABOUT ME</a></h1>
@@ -57,19 +57,20 @@
                     <br>
                 </div>
                 <div class="container-pics">
-                    <img src="./images/princesas.JPG" heigth="200" width="300" alt="princesses">
+                    <img class="daughters" src="./images/princesas.JPG" heigth="200" width="300" alt="princesses">
                 </div>
                 <div>
                     <h3 class="big-centered">This is also me!   <span><i class="fas fa-chevron-right"></i></span></h3>
                 </div>
                 <div class="container-pics">
                     <img src="./images/EEF2532B-C0B0-4502-9ACC-200F4E4A4A18_1_105_c.jpeg" heigth="300" width="400" alt="work-station">
-                    <p>(This is my work/study-station)</p>
+                    <p class="hidden">(This is my work/study-station)</p>
                 </div>
-                <hr>
+                
             </section>
         </div>
-        <div>
+        <hr>
+        <div class="block-container">
             <section class="stack">
                 <div>
                     <h3 id="stack-title"><a id="stitle" name="stack">STACK</a></h3>
@@ -104,9 +105,10 @@
                     <p>In its order, Node JS, Express JS and MongoDB</p>
                 </div>
             </section>
-            <hr>
+            
         </div>
-        <div>
+        <hr>
+        <div class="block-container">
             <section class="projects">
                 <div>
                     <h3 id="projects-title"><a id="ptitle" name="projects"> PROJECTS</a></h3>
@@ -158,9 +160,11 @@ Using the setState property, I handled to use the state and update the state at 
                 </div>
                 
             </section>
-            <hr>
+            
         </div>
-        <div>
+        <hr>
+        <div class="block-container">
+            
             <section class="contact">
                 <div>
                     <h3 id="contact-title"><a id="ctitle" name="contact">CONTACT ME</a></h3>
