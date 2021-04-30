@@ -376,7 +376,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1040px){
+@media only screen and (min-width: 400px) and (max-width: 1040px){
     html {
         font-size: 31.25%;
     }
@@ -430,4 +430,83 @@ footer {
         display: none;
     }
 }
+
+
+@media only screen and (min-width: 375px){
+    html {
+        font-size: 29.25%;
+    }
+    
+    .btn:link,
+    .btn:visited {
+        width: max-content;
+    }
+
+    .about p.right {
+        left: 115%;
+        top: -55%;
+    }
+
+   .about h3.big-centered{
+        left: 140%;
+        top: 55%;
+        font-size: 3.5rem;
+    }
+
+    .about span.bigger {
+        font-size: 4rem;
+    }
+
+    .hidden,
+    .hidden-icon {
+        display: none;
+    }
+    
+    .project-div {
+        font-size: smaller;
+    }
+
+    .text-box {
+        width: 100%;
+    }
+    .content {
+        width: 100%;
+        margin: 0;
+    }
+    .block-container {
+        width: 100%;
+    }
+    section {
+        width: 100%;
+    }
+   
+    .contact-me {
+        position: absolute;
+        width: 260px;
+        top: 30%;
+        left: 25%;
+    }
+
+    .daughters{
+        width: 102%;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-pics{
+        left: 5%;
+    }
+    
+    .stack .tech-container{
+        left: 5%;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20%;
+    }
+}
+
 
