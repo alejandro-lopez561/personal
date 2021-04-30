@@ -376,7 +376,7 @@ footer {
     margin-bottom: 2rem;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 1040px){
+@media only screen and (min-width: 500px) and (max-width: 1040px){
     html {
         font-size: 31.25%;
     }
@@ -432,7 +432,7 @@ footer {
 }
 
 
-@media only screen and (min-width: 375px){
+@media only screen and (min-width: 375px) and (max-width: 499px){
     html {
         font-size: 29.25%;
     }
