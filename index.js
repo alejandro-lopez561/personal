@@ -1,40 +1,32 @@
-let num;
-const decide = (...num) => {
-    for (let i = 0; i < num.length; i++){
-        if(num[i] > 0 && num[i] % 2 === 0){
-            return "Par"
-        } else if(num[i] > 0 && num[i] % 2 === 1){
-            return 'Impar'
-        } else {
-            return "No aplica"
-        }
+$(function(){
+    $("#about").load("/include/about.html"); 
+    $("#stack").load("/include/stack.html"); 
+    $("#projects").load("/include/projects.html"); 
+    $("#contact").load("/include/contact.html"); 
+});
+
+function hamburger() {
+    var links = document.getElementById("navbar-links");
+    var x = document.getElementById("x");
+    var hamburger = document.getElementById("hamburger");
+
+    if (links.style.display === "block") {
+        links.style.display = "none";
+        x.style.display = "none";
+        hamburger.style.display = "block";
+    } else {
+        links.style.display = "block";
+        x.style.display = "block";
+        hamburger.style.display = "none";
     }
 }
 
-decide(1,2,3,4,5,6,7,8,9,10);
+$(window).resize(function() {
+    if ($(window).innerWidth() >= 977) {
+        $('#navbar-links').css('display','block');
+    } else {
+        $('#navbar-links').css('display','none');
+    }
+});
 
-
-
-const p = document.querySelector('p');
-
-p.addEventListener('click', (e) =>{
-    e.target.style.backgroundColor = 'yellow'
-})
-
-
-//Generates all permutations of a string (contains duplicates)
-
-/*
-const tips_stringPermutations = str => {
-    if (str.length <= 2) return str.length === 2 ? [str, str[1] + str[0]] : [str];
-    return str
-      .split('')
-      .reduce(
-        (acc, letter, i) =>
-          acc.concat(tips_stringPermutations(str.slice(0, i) + str.slice(i + 1)).map(val => letter + val)),
-        []
-      );
-  };
-  
-  console.log(tips_stringPermutations('xyz'));
-  */
+ 

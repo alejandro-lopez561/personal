@@ -1,0 +1,43 @@
+.projects {
+    padding: 3rem 0;
+    
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+ 
+        @include m992 {
+            grid-template-columns: 1fr 1fr;
+            
+        }
+
+        h3 {
+            font-size: 2.6rem;
+            line-height: 1.2;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            margin: 0 auto 2rem;
+
+            @include m992 {
+                font-size: 3.2;
+            }
+        }
+
+        .col {
+            margin: 2rem 0 0;
+        }
+
+    }
+    
+    hr {
+        margin: 4rem 0;
+    }
+
+    .disclaimer {
+        text-align: center;
+    }
+
+}
+
+
