@@ -20,12 +20,6 @@
   }
 }
 
-.about .grid-container .col {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
 .about .grid-container hr {
   display: block;
   border: 0;
@@ -663,6 +657,20 @@ p {
     width: 100%;
     font-size: 2.6rem;
   }
+}
+
+.col-l {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-right: 2rem;
+}
+
+.col-r {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-left: 2rem;
 }
 
 hr {

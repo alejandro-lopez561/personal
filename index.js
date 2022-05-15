@@ -1,9 +1,9 @@
-$(function(){
-    $("#about").load("/include/about.html"); 
-    $("#stack").load("/include/stack.html"); 
-    $("#projects").load("/include/projects.html"); 
-    $("#contact").load("/include/contact.html"); 
-});
+// $(function(){
+//     $("#about").load("/include/about.html"); 
+//     $("#stack").load("/include/stack.html"); 
+//     $("#projects").load("/include/projects.html"); 
+//     $("#contact").load("/include/contact.html"); 
+// });
 
 function hamburger() {
     var links = document.getElementById("navbar-links");
