@@ -131,13 +131,17 @@ p {
 }
 
 .col-l {
-    align-self: center;
-    padding-right: 2rem;
+    @include m992 {
+        align-self: center;
+        padding-right: 2rem;
+    }
 }
 
 .col-r {
-    align-self: center;
-    padding-left: 2rem;
+    @include m992 {
+        align-self: center;
+        padding-left: 2rem;
+    }
 }
 
 hr {

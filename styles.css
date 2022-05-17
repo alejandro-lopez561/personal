@@ -659,18 +659,22 @@ p {
   }
 }
 
-.col-l {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-right: 2rem;
+@media (min-width: 992px) {
+  .col-l {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-right: 2rem;
+  }
 }
 
-.col-r {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding-left: 2rem;
+@media (min-width: 992px) {
+  .col-r {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: 2rem;
+  }
 }
 
 hr {
